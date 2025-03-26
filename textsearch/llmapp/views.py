@@ -42,8 +42,8 @@ class LoginView(APIView):
         return Response({"error": "Invalid Credentials"}, status=status.HTTP_401_UNAUTHORIZED)
 
 class SearchTextApi(APIView):
-    # authentication_classes=[JWTAuthentication]
-    # permission_classes=[IsAuthenticated]
+    authentication_classes=[JWTAuthentication]
+    permission_classes=[IsAuthenticated]
     def get(self,request):
         return Response({'message':'Search-text'},status=status.HTTP_200_OK)
     
